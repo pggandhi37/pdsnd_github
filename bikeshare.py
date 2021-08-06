@@ -173,6 +173,7 @@ def user_stats(df):
     print('-'*40)
 
 def raw_data(df):
+    """Displays the raw data."""
     while True:
         view_data = input('\nWould you like to view 5 rows of individual trip data? Enter yes or no\n').lower()
         if view_data in ('yes', 'no'):
