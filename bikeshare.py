@@ -134,12 +134,12 @@ def trip_duration_stats(df):
     start_time = time.time()
 
     # display total travel time
-    total_travel_time = df['Trip Duration'].sum()
-    print("Total travel time is:",total_travel_time)
+    total_travel_time = round((df['Trip Duration'].sum() / 360), 2)
+    print("Total travel time is: {} hours".format(total_travel_time))
 
     # display mean travel time
-    average_travel_time = df['Trip Duration'].mean()
-    print("Average travel time is:",average_travel_time)
+    average_travel_time = round((df['Trip Duration'].mean() / 360), 2)
+    print("Average travel time is: {} hours".format(average_travel_time))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -161,9 +161,9 @@ def user_stats(df):
         print("Count of records based on Gender :"'\n', gender_count)
 
         # Display earliest, most recent, and most common year of birth
-        earliest_birth_year = df['Birth Year'].min()
-        recent_birth_year = df['Birth Year'].max()
-        common_birth_year = df['Birth Year'].mode()[0]
+        earliest_birth_year = int(df['Birth Year'].min())
+        recent_birth_year = int(df['Birth Year'].max())
+        common_birth_year = int(df['Birth Year'].mode()[0])
         print("Earliest Birth Year is {}\nMost Recent Birth Year is {}\nMost common birth year is {}: ".format(earliest_birth_year, recent_birth_year, common_birth_year))
 
     else:
