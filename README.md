@@ -17,3 +17,6 @@ https://classroom.udacity.com/nanodegrees/nd104/dashboard/overview
 
 ### Document Created by
 Payal Gandhi
+
+### Tools/ Skills Used
+SQL, Python, Git, GitHUB
